@@ -9,8 +9,14 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite-plugin-vue-layouts/client","vite-plugin-pages/client"]
+    "types": ["vite-plugin-vue-layouts/client", "vite-plugin-pages/client"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "allowJs": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
