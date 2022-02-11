@@ -8,7 +8,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import ViteFonts from "vite-plugin-fonts";
 import ViteRadar from "vite-plugin-radar";
 
-const path = require("path");
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,9 +28,9 @@ export default defineConfig({
         "apple-touch-icon.png"
       ],
       manifest: {
-        name: "High School",
-        short_name: "Short High School",
-        description: "High School",
+        name: "Template",
+        short_name: "Short Template",
+        description: "Template",
         theme_color: "#063296",
         icons: [
           {
@@ -55,7 +55,7 @@ export default defineConfig({
     ViteRadar({
       gtm: [
         {
-          id: "GTM-MZ5WDSP"
+          id: "Your_GTM_ID"
         }
       ]
     }),
@@ -73,21 +73,17 @@ export default defineConfig({
       google: {
         families: [
           {
-            name: "Roboto",
-            styles: "ital,wght@0,400;1,200"
-          },
-          {
-            name: "Rubik"
+            name: "Roboto"
           }
         ]
       }
     })
-  ],
-  css: {
+  ]
+  /*   css: {
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/assets/scss/_utilities.scss";`
       }
     }
-  }
+  } */
 });
